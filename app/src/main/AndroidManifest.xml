@@ -40,7 +40,9 @@
             android:name="UMENG_CHANNEL"
             android:value="TipSee" />
 
-        <activity android:name=".VRVideoListActivity"></activity>
+        <activity
+            android:name=".VRVideoListActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

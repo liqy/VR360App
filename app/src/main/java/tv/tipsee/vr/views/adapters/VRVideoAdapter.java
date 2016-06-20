@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import tv.tipsee.vr.R;
 import tv.tipsee.vr.models.VRVideo;
@@ -28,11 +29,20 @@ public class VRVideoAdapter extends RecyclerView.Adapter<VRVideoAdapter.ViewHold
         this.videos = new ArrayList<>();
     }
 
+    public void addVrVideoList(List<VRVideo> list) {
+        if (list != null && !list.isEmpty()) {
+            this.videos.addAll(list);
+            notifyDataSetChanged();
+        }
+    }
+
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_vr_video, parent, false);
         return new ViewHolder(view);
     }
+
+
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
@@ -48,6 +58,15 @@ public class VRVideoAdapter extends RecyclerView.Adapter<VRVideoAdapter.ViewHold
         holder.vr_video_title.setText(video.title);
         holder.vr_video_desc.setText(video.desc);
 
+    }
+
+    public VRVideo getItem(int position){
+        return this.videos.get(position);
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
     }
 
     @Override

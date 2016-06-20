@@ -18,21 +18,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Call<RootData<List<VRVideo>>> list = RestClient.getClient().getVideoList();
 
-        list.enqueue(new Callback<RootData<List<VRVideo>>>() {
-            @Override
-            public void onResponse(Call<RootData<List<VRVideo>>> call, Response<RootData<List<VRVideo>>> response) {
-
-                RootData<List<VRVideo>> data = response.body();
-
-            }
-
-            @Override
-            public void onFailure(Call<RootData<List<VRVideo>>> call, Throwable t) {
-
-            }
-        });
 
     }
 }
