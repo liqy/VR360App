@@ -28,6 +28,8 @@ dependencies {
 
     compile 'com.code19.library:library:0.0.7'
 
+    compile 'com.jcodecraeer:xrecyclerview:1.2.7'
+
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'

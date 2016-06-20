@@ -1,4 +1,4 @@
-package tv.tipsee.vr;
+package tv.tipsee.vr.player;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import android.widget.Toast;
 import com.asha.vrlib.MDVRLibrary;
 
 import tv.danmaku.ijk.media.player.IMediaPlayer;
+import tv.tipsee.vr.R;
 
 /**
  * Created by hzqiujiadi on 16/4/5.

@@ -2,11 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="tv.tipsee.vr">
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -21,9 +21,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".player.VideoPlayerActivity"
+            android:configChanges="screenSize|orientation"
+            android:label="MDMultiDemoActivity"
+            android:process=":vrPlayer"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".player.BitmapPlayerActivity"
+            android:configChanges="screenSize|orientation"
+            android:label="MDMultiDemoActivity"
+            android:screenOrientation="landscape" />
 
-        <meta-data android:value="576791ec67e58e9d5000080c" android:name="UMENG_APPKEY"></meta-data>
-        <meta-data android:value="TipSee" android:name="UMENG_CHANNEL"/>
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="576791ec67e58e9d5000080c" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="TipSee" />
+
+        <activity android:name=".VRVideoListActivity"></activity>
     </application>
 
 </manifest>

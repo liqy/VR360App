@@ -1,4 +1,4 @@
-package tv.tipsee.vr;
+package tv.tipsee.vr.player;
 
 import android.app.Activity;
 import android.content.Context;
@@ -13,6 +13,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 import com.asha.vrlib.MDVRLibrary;
+
+import tv.tipsee.vr.R;
 
 /**
  * using MD360Renderer

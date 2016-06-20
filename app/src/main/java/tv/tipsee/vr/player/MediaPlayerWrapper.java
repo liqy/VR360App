@@ -1,4 +1,4 @@
-package tv.tipsee.vr;
+package tv.tipsee.vr.player;
 
 import android.content.Context;
 import android.content.res.AssetManager;

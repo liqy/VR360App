@@ -1,4 +1,4 @@
-package tv.tipsee.vr;
+package tv.tipsee.vr.player;
 
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
@@ -11,6 +11,8 @@ import com.asha.vrlib.MDVRLibrary;
 import com.asha.vrlib.texture.MD360BitmapTexture;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
+
+import tv.tipsee.vr.R;
 
 /**
  * Created by hzqiujiadi on 16/4/5.
