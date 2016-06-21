@@ -23,10 +23,8 @@ import tv.tipsee.vr.views.adapters.VRVideoAdapter;
 
 public class VRVideoListActivity extends BaseActivity implements XRecyclerView.LoadingListener {
 
-
     private XRecyclerView recyclerView;
     private VRVideoAdapter vrVideoAdapter;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,19 +83,19 @@ public class VRVideoListActivity extends BaseActivity implements XRecyclerView.L
                 if (data != null && data.isValueOk()) {
                     vrVideoAdapter.addVrVideoList(data.value);
                 }
-
+                recyclerView.refreshComplete();
             }
 
             @Override
             public void onFailure(Call<RootData<List<VRVideo>>> call, Throwable t) {
-
+                recyclerView.refreshComplete();
             }
         });
     }
 
-
     @Override
     public void onRefresh() {
+//        loadVrVideoList();
         recyclerView.refreshComplete();
     }
 
@@ -105,7 +103,6 @@ public class VRVideoListActivity extends BaseActivity implements XRecyclerView.L
     public void onLoadMore() {
         recyclerView.refreshComplete();
         recyclerView.loadMoreComplete();
-
     }
 
 }

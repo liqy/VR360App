@@ -61,7 +61,7 @@ public class VRVideoAdapter extends RecyclerView.Adapter<VRVideoAdapter.ViewHold
     }
 
     public VRVideo getItem(int position){
-        return this.videos.get(position);
+        return this.videos.get(position-1);
     }
 
     @Override
